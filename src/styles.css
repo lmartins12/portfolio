@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+body{
+    background-color: rgb(15, 15, 15);
+}
