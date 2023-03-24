@@ -1,6 +1,6 @@
 mat-toolbar {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.515);
+    background-color: rgba(15, 15, 15, 0.515);
     justify-content: start;
     padding: 16px;
 }
