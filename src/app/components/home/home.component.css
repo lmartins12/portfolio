@@ -1,3 +1,7 @@
+main {
+  filter: blur(10px);
+  animation: blur-out 1.5s forwards;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -13,7 +17,7 @@ img {
   max-height: none;
 }
 
-p {
+h1 {
   font-family: 'Chakra Petch', sans-serif;
   font-size: 56px;
   color: rgb(255, 240, 227);
@@ -28,9 +32,14 @@ p {
 }
 
 @media (max-width: 1000px) {
-  p {
+  h1 {
     font-size: 30px;
     top: 35%;
   }
 
 }
+
+  @keyframes blur-out {
+    0% { filter: blur(10px); opacity: 0; }
+    100% { filter: none; opacity: 1; }
+  }
