@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  title = "Projetos";
+  titleComplete = "";
+  delay = 100;
+  i = 0;
+
+  ngOnInit(): void {
+    this.digitar();
+  }
+
+  digitar() {
+    if (this.i < this.title.length) {
+      this.titleComplete += this.title.charAt(this.i);
+      this.i++;
+      setTimeout(() => this.digitar(), this.delay);
+    } else {
+    }
+  }
+
 }
