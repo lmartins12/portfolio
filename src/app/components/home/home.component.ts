@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   i = 0;
 
   private audio!: HTMLAudioElement;
+
   private clickListener!: () => void;
 
   constructor(private renderer: Renderer2) { }
@@ -33,9 +34,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.audio.pause();
+
     this.audio.currentTime = 0;
     this.renderer.removeChild(document.body, this.audio);
     this.clickListener();
+
   }
 
   digitar() {
