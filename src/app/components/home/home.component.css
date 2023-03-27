@@ -1,0 +1,45 @@
+main {
+  filter: blur(10px);
+  animation: blur-out 1.5s forwards;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+img {
+  height: auto;
+  max-width: none;
+  max-height: none;
+}
+
+h1 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 56px;
+  color: rgb(255, 240, 227);
+  text-shadow: #ffffffa1 3px 0 10px;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 30px;
+    top: 35%;
+  }
+
+}
+
+  @keyframes blur-out {
+    0% { filter: blur(10px); opacity: 0; }
+    100% { filter: none; opacity: 1; }
+  }

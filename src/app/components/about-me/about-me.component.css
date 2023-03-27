@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .title {
+    font-family: 'Chakra Petch', sans-serif;
+    text-shadow: #e45327 1px 0 10px;
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    margin-top: 32px;
+    filter: blur(10px);
+    animation: blur-out 1s forwards;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    width: 80%;
+    margin-top: 0;
+  }
+  
+  .text {
+    font-family:'Prompt', sans-serif;
+    font-size: 22px;
+    text-shadow: #e9633b 1px 0 3px;
+    color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    filter: blur(10px);
+    animation: blur-out 3s forwards;
+    max-width: 600px;
+  }
+  
+  .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    max-width: 400px;
+    filter: blur(10px);
+    animation: blur-out 2s forwards;
+    background-color: #050505;
+    background: radial-gradient(circle, rgba(0,0,0,1) 13%, rgba(25,25,25,1) 74%, rgba(27,27,27,1) 92%, rgba(34,34,34,1) 100%);
+    box-shadow: 0px 10px 50px #e45327;
+    border-radius: 50% 50% 50% 50% / 28% 73% 27% 72% ;
+    transition: transform 0.5s ease;
+  }
+
+  .photo:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: auto;
+    height: 350px;
+    border-radius: 150px;
+  }
+  
+  @media screen and (max-width: 1000px) { 
+    .content {
+      flex-direction: column; 
+      gap: 0px;
+    }
+    
+    .title{
+        font-size: 48px;
+        margin-top: 20px; margin-bottom: 0px;
+    }
+  
+    .text {
+      font-size: 14px;
+      margin-top: 0px; 
+      width: 100%; 
+      order: 2; 
+      text-align: center;
+    }
+  
+    .photo {
+      margin-top: 40px; margin-bottom: 20px; 
+      box-shadow: 1px 1px 40px #e45327;
+      width: 100%;
+      max-width: 260px;
+      order: 1; 
+    }
+
+    img {
+        width: auto;
+        height: 200px;
+    }
+  }
+
+  @keyframes blur-out {
+    0% { filter: blur(10px); opacity: 0; }
+    100% { filter: none; opacity: 1; }
+  }

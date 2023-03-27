@@ -1,16 +1,17 @@
 mat-toolbar {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.515);
+    background-color: rgba(15, 15, 15, 0.515);
     justify-content: start;
     padding: 16px;
 }
 
 .name {
-    color: rgb(227, 227, 238);
+    color: #f3f3f38e;
+    text-shadow: #e45327 0px 0 10px;
     font-size: 32px;
-    font-family: 'Rubik Iso', cursive;
+    font-family: 'Chakra Petch', sans-serif;
     margin-left: 50px;
-    float: left; /* adicionado */
+    float: left;
 }
   
 .toolbar-buttons {
@@ -42,7 +43,7 @@ button{
 }
 
 .toolbar-buttons button:active {
-    color: #2b2b2b;
+    color: #e45327;
 }
 
 @media (max-width: 1000px) {
@@ -68,12 +69,4 @@ button{
         font-size: 18px;
         transition: all 0.2s ease-in-out;
     }
-    
-    .toolbar-buttons button:hover {
-        transform: scale(1.2);
-    }
-    
-    .toolbar-buttons button:active {
-        color: #2b2b2b;
-    }
-  }
+}

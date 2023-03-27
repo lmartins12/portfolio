@@ -1,0 +1,21 @@
+<h1 class="title"> {{ titleComplete }} </h1>
+
+<main>
+    <div class="nav-buttons">
+      <button id="previous" (click)="previousProject()">Anterior</button>
+      <button id="next" (click)="nextProject()">Próximo</button>
+    </div>
+  
+    <div class="projects-container">
+      <div *ngFor="let project of projectsInfo"
+           [ngClass]="{ 'project-selected': project === selectedProject, 'project-hidden': project !== selectedProject }"
+           class="project">
+        <img src="{{ project.img }}" alt="">
+        <div class="project-info">
+          <h3 class="project-title">{{ project.titulo }}</h3>
+          <p class="project-description">{{ project.resumo }}</p>
+          <a class="project-link" href="{{ project.link }}">Ver projeto</a>
+        </div>
+      </div>
+    </div>
+  </main>
