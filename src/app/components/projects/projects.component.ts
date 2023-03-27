@@ -23,19 +23,19 @@ export class ProjectsComponent {
     {
       img: "assets/projects/DueloPokemon.png",
       titulo: "Duelo Pokémon",
-      resumo: "Projeto realizado em Javascript, trata-se de uma simulção de duelo Pokémon com base em seus atributos, o que tiver o maior atributo vence.",
+      resumo: "Esse projeto realizado em Javascript trata-se de uma simulção de duelo Pokémon com base em seus atributos, o que tiver o maior atributo vence.",
       link: "https://lmartins12.github.io/duelo-pokemon/"
     },
     {
       img: "assets/projects/Calculadora.png",
-      titulo: "Calculador",
-      resumo: "Calculadora simples para treinar utilização de Classes em Javascript",
+      titulo: "Calculadora",
+      resumo: "Este projeto trata-se de uma calculadora simples para treinar utilização de Classes e métodos em Javascript e display grid em CSS",
       link: "https://lmartins12.github.io/calculadora-js/"
     },
     {
       img: "assets/projects/DodgeThePokeball.png",
       titulo: "Dodge The Pokeball",
-      resumo: "Jogo simples em Javascript, clique em qualquer lugar do site para o Pikachu pular e desviar da pokebola.",
+      resumo: "Esse projeto é um jogo simples em Javascript e CSS, basta clicar em qualquer lugar do site para o Pikachu pular e desviar da pokebola.",
       link: "https://lmartins12.github.io/dodge-the-pokeball/"
     }
   ];
