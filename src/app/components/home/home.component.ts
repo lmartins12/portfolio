@@ -5,6 +5,7 @@ import { Component, OnInit, Renderer2, OnDestroy } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit, OnDestroy {
 
   text = "Olá, seja bem vindo!";
