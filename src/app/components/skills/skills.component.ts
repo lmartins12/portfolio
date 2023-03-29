@@ -1,28 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DigitarService } from 'src/app/services/digitar.service';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
+  
+  titleComplete: string = ''
 
-  title = "Habilidades";
-  titleComplete = "";
-  delay = 100;
-  i = 0;
+  constructor(private digitarService: DigitarService) {
+    document.body.classList.add('com-overflow');
+  }
 
   ngOnInit(): void {
-    this.digitar();
+    this.digitarService.digitar('Habilidades', 100).subscribe((text) => {
+      this.titleComplete = text;
+    });
   }
-
-  digitar() {
-    if (this.i < this.title.length) {
-      this.titleComplete += this.title.charAt(this.i);
-      this.i++;
-      setTimeout(() => this.digitar(), this.delay);
-    } else {
-    }
+  
+  ngOnDestroy() {
+    document.body.classList.remove('com-overflow');
   }
-
 }

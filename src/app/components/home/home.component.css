@@ -1,6 +1,9 @@
+
+
 main {
   filter: blur(10px);
   animation: blur-out 1.5s forwards;
+  overflow: hidden;
 }
 .container {
   display: flex;

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DigitarService } from 'src/app/services/digitar.service';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -6,73 +8,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 
-export class ProjectsComponent {
-  
-  title = "Projetos";
-  titleComplete = "";
-  delay = 100;
-  i = 0;
+export class ProjectsComponent implements OnInit {
 
-  public projectsInfo = [
-    {
-      img: "assets/projects/AluraTube.png",
-      titulo: "AluraTube",
-      resumo: "Projeto realizado em React, trata-se de uma simulação de playlist de musicas do youtube, utilizando banco de dados para armazenar o link das musicas.",
-      link: "https://lmartins12-aluratube.vercel.app/"
-    },
-    {
-      img: "assets/projects/DueloPokemon.png",
-      titulo: "Duelo Pokémon",
-      resumo: "Esse projeto realizado em Javascript trata-se de uma simulção de duelo Pokémon com base em seus atributos, o que tiver o maior atributo vence.",
-      link: "https://lmartins12.github.io/duelo-pokemon/"
-    },
-    {
-      img: "assets/projects/Calculadora.png",
-      titulo: "Calculadora",
-      resumo: "Este projeto trata-se de uma calculadora simples para treinar utilização de Classes e métodos em Javascript e display grid em CSS",
-      link: "https://lmartins12.github.io/calculadora-js/"
-    },
-    {
-      img: "assets/projects/DodgeThePokeball.png",
-      titulo: "Dodge The Pokeball",
-      resumo: "Esse projeto é um jogo simples em Javascript e CSS, basta clicar em qualquer lugar do site para o Pikachu pular e desviar da pokebola.",
-      link: "https://lmartins12.github.io/dodge-the-pokeball/"
-    }
-  ];
+  public titleComplete: string = ''
+  
+  public projectsInfo:any;
+  
+  public selectedProject: any;
+
+  constructor(private digitarService: DigitarService, private projectsService: ProjectsService) {  }
 
   ngOnInit(): void {
-    this.digitar();
-  }
+    this.digitarService.digitar('Projetos', 70).subscribe((text) => {
+      this.titleComplete = text;
+    });
 
-  digitar() {
-    if (this.i < this.title.length) {
-      this.titleComplete += this.title.charAt(this.i);
-      this.i++;
-      setTimeout(() => this.digitar(), this.delay);
-    } else {
-    }
+    this.projectsService.getProjects().subscribe(data => {
+      this.projectsInfo = data;
+      this.selectedProject = this.projectsInfo[0];
+    });
   }
-
-  public selectedProject: any = this.projectsInfo[0];
 
   public nextProject(): void {
-    const currentIndex = this.projectsInfo.indexOf(this.selectedProject);
-    const nextIndex = currentIndex === this.projectsInfo.length - 1 ? 0 : currentIndex + 1;
-    this.selectedProject = this.projectsInfo[nextIndex];
+    this.selectedProject = this.projectsService.getNextProject(this.projectsInfo, this.selectedProject);
   }
 
   public previousProject(): void {
-    const currentIndex = this.projectsInfo.indexOf(this.selectedProject);
-    const previousIndex = currentIndex === 0 ? this.projectsInfo.length - 1 : currentIndex - 1;
-    this.selectedProject = this.projectsInfo[previousIndex];
-  }
-
-  showInfo(project: any) {
-    this.selectedProject = project;
-  }
-
-  hideInfo(project: any) {
-    this.selectedProject = null;
+    this.selectedProject = this.projectsService.getPreviousProject(this.projectsInfo, this.selectedProject);
   }
 
 }

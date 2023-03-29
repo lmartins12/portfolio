@@ -1,0 +1,32 @@
+[
+    {
+        "img": "assets/projects/MundoLM.png",
+        "titulo": "Mundo <LM>",
+        "resumo": "Mundo <LM> é um blog em Wordpress com artigos dos mais variados temas do mundo virtual, criei ele com o intuito compartilhar conhecimentos que tenho e terei.",
+        "link": "https://mundolm.net/"
+    },
+    {
+        "img": "assets/projects/AluraTube.png",
+        "titulo": "AluraTube",
+        "resumo": "Projeto realizado em React, trata-se de uma simulação de playlist de musicas do youtube, utilizando banco de dados para armazenar o link das musicas.",
+        "link": "https://lmartins12-aluratube.vercel.app/"
+    },
+    {
+        "img": "assets/projects/DueloPokemon.png",
+        "titulo": "Duelo Pokémon",
+        "resumo": "Esse projeto realizado em Javascript trata-se de uma simulção de duelo Pokémon com base em seus atributos, o que tiver o maior atributo vence.",
+        "link": "https://lmartins12.github.io/duelo-pokemon/"
+    },
+    {
+        "img": "assets/projects/Calculadora.png",
+        "titulo": "Calculadora",
+        "resumo": "Este projeto trata-se de uma calculadora simples para treinar utilização de Classes e métodos em Javascript e display grid em CSS.",
+        "link": "https://lmartins12.github.io/calculadora-js/"
+    },
+    {
+        "img": "assets/projects/DodgeThePokeball.png",
+        "titulo": "Dodge The Pokeball",
+        "resumo": "Esse projeto é um jogo simples em Javascript e CSS, basta clicar em qualquer lugar do site para o Pikachu pular e desviar da pokebola.",
+        "link": "https://lmartins12.github.io/dodge-the-pokeball/"
+    }
+]

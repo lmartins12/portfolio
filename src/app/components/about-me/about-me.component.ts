@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DigitarService } from 'src/app/services/digitar.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,22 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
-  title = "Sobre mim";
-  titleComplete = "";
-  delay = 100;
-  i = 0;
+  titleComplete: string = ''
+
+  constructor(private digitarService: DigitarService) {  }
 
   ngOnInit(): void {
-    this.digitar();
-  }
-
-  digitar() {
-    if (this.i < this.title.length) {
-      this.titleComplete += this.title.charAt(this.i);
-      this.i++;
-      setTimeout(() => this.digitar(), this.delay);
-    } else {
-    }
+    this.digitarService.digitar('Sobre mim', 100).subscribe((text) => {
+      this.titleComplete = text;
+    });
   }
 
 }

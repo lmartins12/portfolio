@@ -9,6 +9,41 @@
     text-align: center;
   }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: aliceblue;
+  filter: blur(10px);
+  animation: blur-out 2s forwards;
+}
+
+.container p {
+  margin: 10px 10px 40px;
+}
+
+.allSkills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.softSkills, .hardSkills {
+  width: 80%;
+  max-width: 400px;
+  height: 50%;
+  background-color: #161616;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding: 25px;
+  margin: 20px;
+}
+
+
 @keyframes blur-out {
     0% { filter: blur(10px); opacity: 0; }
     100% { filter: none; opacity: 1; }
@@ -17,6 +52,9 @@
 @media screen and (max-width: 1000px) {
     .title{
         font-size: 48px;
-        margin-top: 20px; margin-bottom: 0px;
+        margin-top: 20px;
+    }
+    .container p {
+      margin: 0px 20px 20px;
     }
 }

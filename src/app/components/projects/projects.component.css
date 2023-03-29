@@ -50,6 +50,7 @@ img {
 }
 
 .image-container {
+  min-height: 260px;
   filter: blur(10px);
   animation: blur-out 1.5s forwards;
   border-radius: 15px;
@@ -98,7 +99,7 @@ img {
     rgba(0,0,0,0.8995973389355743) 80%, 
     rgba(0,0,0,0.7455357142857143) 100%);
   color: white;
-  padding: 20px;
+  padding: 0 20px 40px;
   border-radius: 15px;
 }
 
@@ -119,6 +120,7 @@ img {
   font-family: 'Prompt', sans-serif;
   color: #e45327;
   text-shadow: #000000ec 0px 0 5px;
+  margin-bottom: 0;
 }
 
 .project-info a {
@@ -156,6 +158,7 @@ img {
     gap: 50%;
   }
   .image-container {
+    min-height: 200px;
     max-width: 90%;
   }
   .project-info {
@@ -164,5 +167,8 @@ img {
   }
   .project-info h3 {
     font-size: 22px;
+  }
+  .project-info p {
+    font-size: 14px;
   }
 }
