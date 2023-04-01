@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     this.digitarService.digitar('Olá, seja bem vindo!', 150).subscribe((text) => {
       this.titleComplete = text;
     });
+
   }
   
 }
