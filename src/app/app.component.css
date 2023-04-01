@@ -1,0 +1,19 @@
+app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+app-home {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+app-about-me, app-skills, app-projects, app-contact {
+    display: block;
+    min-height: 100vh;
+    padding: 70px 0 0;
+}
