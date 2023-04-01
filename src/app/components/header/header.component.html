@@ -1,14 +1,27 @@
 <mat-toolbar>
-    <span class="name"> < LM > </span>
+  <span class="name">lm</span>
 
-    <div class="toolbar-buttons">
-        <button mat-button routerLink="/">
+  <button mat-icon-button class="hamburger-menu" (click)="showMenu()">
+      <mat-icon style="color: #f3f3f38e; text-shadow: #e45327 0px 0 10px; height: auto; width: auto; font-size: 36px;">menu</mat-icon>
+  </button>
+
+    <div class="menu-overlay" [class.open]="menuOpen" (click)="closeMenu()"></div>
+    <div class="menu" [class.open]="menuOpen">
+        <button mat-button (click)="scrollToComponent('home'); closeMenu()">Home</button>
+        <button mat-button (click)="scrollToComponent('about'); closeMenu()">Sobre</button>
+        <button mat-button (click)="scrollToComponent('skills'); closeMenu()">Habilidades</button>
+        <button mat-button (click)="scrollToComponent('projects'); closeMenu()">Projetos</button>
+        <button mat-button (click)="scrollToComponent('contact'); closeMenu()">Contato</button>
+    </div>
+
+
+  <div class="toolbar-buttons">
+      <button mat-button (click)="scrollToComponent('home')">
           <mat-icon>home</mat-icon>
-        </button>
-        <button mat-button routerLink="/about-me">Sobre</button>
-        <button mat-button routerLink="/skills">Skills</button>
-        <button mat-button routerLink="/projects">Projetos</button>
-        <button mat-button routerLink="/contact">Contato</button>
-      </div>
-
+      </button>
+      <button mat-button (click)="scrollToComponent('about')">Sobre</button>
+      <button mat-button (click)="scrollToComponent('skills')">Habilidades</button>
+      <button mat-button (click)="scrollToComponent('projects')">Projetos</button>
+      <button mat-button (click)="scrollToComponent('contact')">Contato</button>
+  </div>
 </mat-toolbar>

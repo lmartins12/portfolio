@@ -1,8 +1,10 @@
 mat-toolbar {
     width: 100%;
-    background-color: rgba(15, 15, 15, 0.515);
-    justify-content: start;
-    padding: 16px;
+    background-color: #000000d5;
+    padding: 16px 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .name {
@@ -10,32 +12,22 @@ mat-toolbar {
     text-shadow: #e45327 0px 0 10px;
     font-size: 32px;
     font-family: 'Chakra Petch', sans-serif;
-    margin-left: 50px;
-    float: left;
 }
   
 .toolbar-buttons {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Rajdhani', sans-serif;
     gap: 24px;
-}
-    
-button{
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
+    display: flex;
+    justify-content: center;
 }
 
 .toolbar-buttons button {
     color: rgb(224, 224, 224);
     font-size: 18px;
     transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .toolbar-buttons button:hover {
@@ -46,27 +38,76 @@ button{
     color: #e45327;
 }
 
-@media (max-width: 1000px) {
-    mat-toolbar {
-        height: 125px;
-        padding: 0;
-        align-items: start;
-      }
+.hamburger-menu {
+    display: none;
+}
 
-    .name { 
-        margin: 18px auto;
+.menu {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .toolbar-buttons {
+        display: none;
     }
 
-    .toolbar-buttons {
+    .hamburger-menu {
+        display: block;
+        background: none;
+        border: none;
+        height: 36px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: #000000d5;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: left 0.3s ease-in-out;
+        z-index: 100;
+        font-family: 'Rajdhani', sans-serif;
+        gap: 24px;
         display: flex;
         justify-content: center;
-        gap: 8px;
-        margin-top: 72px;
+        flex-direction: column;
     }
     
-    .toolbar-buttons button {
+    .menu button {
         color: rgb(224, 224, 224);
-        font-size: 18px;
+        font-size: 28px;
         transition: all 0.2s ease-in-out;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .menu button:hover {
+        transform: scale(1.2);
+    }
+    
+    .menu button:active {
+        color: #e45327;
+    }
+
+    .menu.open {
+        left: 0;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: none;
+        z-index: 99;
+    }
+
+    .menu-overlay.open {
+        display: block;
     }
 }
