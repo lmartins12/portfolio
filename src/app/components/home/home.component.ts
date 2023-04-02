@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private digitarService: DigitarService) { }
 
   ngOnInit() {
-    this.digitarService.digitar('Olá, seja bem vindo!', 150).subscribe((text) => {
+    this.digitarService.digitar('Olá, seja bem vindo!', 100).subscribe((text) => {
       this.titleComplete = text;
     });
 
