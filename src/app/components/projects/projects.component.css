@@ -156,9 +156,11 @@ img {
     height: 90%;
     padding: 0 10px 40px;
   }
+  
   .project-info h3 {
     font-size: 22px;
   }
+  
   .project-info p {
     font-size: 14px;
   }
