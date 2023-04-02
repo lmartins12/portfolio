@@ -4,14 +4,7 @@
     color: rgb(0, 0, 0);
     font-size: 4rem;
     margin-top: 32px;
-    filter: blur(10px);
-    animation: blur-out 1s forwards;
     text-align: center;
-  }
-
-@keyframes blur-out {
-    0% { filter: blur(10px); opacity: 0; }
-    100% { filter: none; opacity: 1; }
   }
 
 @media screen and (max-width: 1000px) {

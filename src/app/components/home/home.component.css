@@ -1,10 +1,7 @@
-
-
 main {
-  filter: blur(10px);
-  animation: blur-out 1.5s forwards;
   overflow: hidden;
 }
+
 .container {
   display: flex;
   justify-content: center;
@@ -41,8 +38,3 @@ h1 {
   }
 
 }
-
-  @keyframes blur-out {
-    0% { filter: blur(10px); opacity: 0; }
-    100% { filter: none; opacity: 1; }
-  }
