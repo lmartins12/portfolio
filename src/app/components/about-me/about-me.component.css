@@ -12,6 +12,8 @@
     color: rgb(0, 0, 0);
     font-size: 4rem;
     margin-top: 32px;
+    user-select: none;
+    pointer-events: none;
   }
   
   .content {
@@ -33,6 +35,8 @@
     align-items: center;
     width: 50%;
     max-width: 600px;
+    user-select: none;
+    pointer-events: none;
   }
   
   .photo {
@@ -46,6 +50,7 @@
     box-shadow: 0px 10px 50px #e45327;
     border-radius: 50% 50% 50% 50% / 28% 73% 27% 72% ;
     transition: transform 0.5s ease;
+    user-select: none;
   }
 
   .photo:hover {

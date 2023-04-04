@@ -15,5 +15,11 @@ app-home {
 app-about-me, app-skills, app-projects, app-contact {
     display: block;
     min-height: 100vh;
-    padding: 70px 0 0;
+    padding: 150px 0 0;
+}
+
+@media screen and (max-height: 768px) {
+    app-about-me, app-skills, app-projects, app-contact {
+        padding: 75px 0 0;
+    }
 }

@@ -5,6 +5,8 @@
     font-size: 4rem;
     margin-top: 32px;
     text-align: center;
+    user-select: none;
+    pointer-events: none;
   }
 
 .container {
@@ -17,14 +19,17 @@
 
 .container p {
   margin: 10px 10px 20px;
+  font-size: 18px;
+  font-family: 'prompt', sans-serif;
+  text-shadow: #e45327 0px 0 15px;
+  user-select: none;
+  pointer-events: none;
+  max-width: 80%;
 }
 
-.allSkills{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #161616;
+.content {
+  background-color: #050505;
+  box-shadow: 0px 0px 10px #E45327;
   border-radius: 5px;
   color: #fff;
   font-size: 24px;
@@ -33,12 +38,89 @@
   margin: 20px;
 }
 
+.allSkills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skillName {
+  margin-top: 20px;
+  font-family: 'prompt', sans-serif;
+  text-shadow: #e45327 0px 0 15px;
+  user-select: none;
+  pointer-events: none;
+}
+
+i {
+  font-size: 72px;
+  margin: 14px;
+  color: #303030;
+  transition: transform 0.5s ease;
+}
+
+#html5:hover {
+  transform: scale(1.1);
+  color: #E54E26 ;
+}
+
+#css3:hover {
+  transform: scale(1.1);
+  color: #3D8FC6;
+}
+
+#js:hover {
+  transform: scale(1.1);
+  color: #F0DB4F;
+}
+
+#ts:hover {
+  transform: scale(1.1);
+  color: #007ACC;
+}
+
+#node:hover {
+  transform: scale(1.1);
+  color: #83CD29;
+}
+
+#angular:hover {
+  transform: scale(1.1);
+  color: #C4473A;
+}
+
+#java:hover {
+  transform: scale(1.1);
+  color: #EA2D2E;
+}
+
+#spring:hover {
+  transform: scale(1.1);
+  color: #5FB832;
+}
+
+#linux:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+#git:hover {
+  transform: scale(1.1);
+  color: #F34F29;
+}
+
 @media screen and (max-width: 1000px) {
     .title{
         font-size: 48px;
         margin-top: 20px;
     }
     .container p {
+      font-size: 14px;
       margin: 0px 20px 20px;
+      max-width: 90%;
+    }
+    i {
+      font-size: 56px
     }
 }

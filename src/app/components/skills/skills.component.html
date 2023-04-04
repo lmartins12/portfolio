@@ -1,13 +1,31 @@
-<h1 class="title" data-aos="zoom-in" data-aos-duration="1200"> Habilidades </h1>
+<h1 class="title" data-aos="zoom-in" data-aos-duration="1000"> Habilidades </h1>
 
-<div class="container" data-aos="zoom-in" data-aos-duration="1500">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis possimus vero facere soluta ad amet minima</p>
+<div class="container" data-aos="zoom-in" data-aos-duration="1200">
+  <p>Busco sempre desenvolver minhas habilidades técnicas e comportamentais, especialmente em áreas como comunicação, resolução de problemas, adaptabilidade, 
+    proatividade e trabalho em equipe. Além disso, estou em constante busca de novos conhecimentos e desafios para aprimorar ainda mais minhas habilidades.
+    <br>
+    <br>
+    Algumas das tecnologias que tenho contato e estudo:</p>
+
+  <div class="content">
 
     <div class="allSkills">
-        <p>javascript</p>
-        <p>typescript</p>
-        <p>angular</p>
-        <p>react</p>
+        <i id="html5" class="devicon-html5-plain" (mouseover)="updateSkillInput('HTML5')"></i>
+        <i id="css3" class="devicon-css3-plain" (mouseover)="updateSkillInput('CSS3')"></i>
+        <i id="js" class="devicon-javascript-plain" (mouseover)="updateSkillInput('JavaScript')"></i>
+        <i id="ts" class="devicon-typescript-plain" (mouseover)="updateSkillInput('TypeScript')"></i>
+        <i id="node" class="devicon-nodejs-plain" (mouseover)="updateSkillInput('Node.js')"></i>
+        <i id="angular" class="devicon-angularjs-plain" (mouseover)="updateSkillInput('Angular')"></i>
+        <i id="java" class="devicon-java-plain" (mouseover)="updateSkillInput('Java')"></i>
+        <i id="spring" class="devicon-spring-plain" (mouseover)="updateSkillInput('Spring')"></i>
+        <i id="linux" class="devicon-linux-plain" (mouseover)="updateSkillInput('Linux')"></i>
+        <i id="git" class="devicon-git-plain" (mouseover)="updateSkillInput('Git')"></i>
     </div>
 
+    <div class="skillName">
+        <span class="skill-input" [innerHTML]="skillInput"></span>
+    </div>
+
+  </div>
+  
 </div>
