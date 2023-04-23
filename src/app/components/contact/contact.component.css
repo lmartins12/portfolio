@@ -1,15 +1,91 @@
-.title {
-    font-family: 'Chakra Petch', sans-serif;
-    text-shadow: #e45327 0px 0 15px;
-    color: rgb(0, 0, 0);
-    font-size: 4rem;
-    margin-top: 32px;
-    text-align: center;
-  }
+    .title {
+        font-family: 'Chakra Petch', sans-serif;
+        text-shadow: #e45327 0px 0 15px;
+        color: rgb(0, 0, 0);
+        font-size: 4rem;
+        margin: 32px 0 10px;
+        text-align: center;
+        user-select: none;
+        pointer-events: none;
+    }
 
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: aliceblue;
+    }
+    
+    .container p {
+        margin: 30px 10px;
+        font-size: 18px;
+        font-family: 'prompt', sans-serif;
+        text-shadow: #e45327 0px 0 15px;
+        user-select: none;
+        pointer-events: none;
+        max-width: 80%;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        margin: 20 0px;
+        flex-wrap: wrap;
+    }
+
+    #github {
+        font-size: 72px;
+        color: #303030;
+        transition: transform 0.5s ease;
+    }    
+
+    #linkedin {
+        font-size: 72px;
+        color: #303030;
+        transition: transform 0.5s ease;
+    }
+
+    #email {
+        font-size: 86px;
+        height: auto; 
+        width: auto;
+        color: #303030;
+        transition: transform 0.5s ease;
+    }
+  
+    #github:hover {
+        transform: scale(1.1);
+        color: #f7f7f7 ;
+    }
+    
+    #linkedin:hover {
+        transform: scale(1.1);
+        color: #0076b2;
+    }
+
+    #email:hover {
+        transform: scale(1.1);
+        color: #e6e6e6 ;
+    }
+    
 @media screen and (max-width: 1000px) {
     .title{
         font-size: 48px;
-        margin-top: 20px; margin-bottom: 0px;
+        margin: 20px 0 20px;
+    }
+
+    .container p {
+        font-size: 16px;
+    }
+      
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
     }
 }

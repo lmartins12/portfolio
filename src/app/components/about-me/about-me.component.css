@@ -8,12 +8,37 @@
   
   .title {
     font-family: 'Chakra Petch', sans-serif;
-    text-shadow: #e45327 1px 0 10px;
+    text-shadow: #e45327 0 0 15px;
     color: rgb(0, 0, 0);
     font-size: 4rem;
-    margin-top: 32px;
+    margin: 32px 0 10px;
+    text-align: center;
     user-select: none;
     pointer-events: none;
+  }
+  
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  i {
+    font-size: 32px;
+    margin: 14px;
+    color: #303030;
+    transition: transform 0.5s ease;
+  }
+
+  #github:hover {
+    transform: scale(1.1);
+    color: #f7f7f7 ;
+  }
+  
+  #linkedin:hover {
+    transform: scale(1.1);
+    color: #0076b2;
   }
   
   .content {
@@ -71,7 +96,7 @@
     
     .title{
         font-size: 48px;
-        margin-top: 20px; margin-bottom: 0px;
+        margin: 20px 0 10px;
     }
   
     .text {
@@ -83,7 +108,7 @@
     }
   
     .photo {
-      margin-top: 40px; margin-bottom: 20px; 
+      margin: 30px 0 20px; 
       box-shadow: 1px 1px 40px #e45327;
       width: 100%;
       max-width: 260px;

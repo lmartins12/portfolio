@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit{
   private musicStarted = false;
   private audio!: HTMLAudioElement;
 
-  constructor(private renderer: Renderer2) {}
+  constructor() {}
 
   ngOnInit(): void {
     const triggerMusic = () => {
@@ -20,10 +20,10 @@ export class HeaderComponent implements OnInit{
     };
     
     // Adiciona listener para o evento de clique
-    document.body.addEventListener('click', triggerMusic);
+    window.addEventListener('click', triggerMusic);
     
     // Adiciona listener para o evento de rolagem da página
-    document.body.addEventListener('scroll', triggerMusic);
+    window.addEventListener('scroll', triggerMusic);
   }
 
   private initMusic(): void {

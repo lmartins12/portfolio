@@ -4,7 +4,7 @@ app-header {
     left: 0;
     width: 100%;
     z-index: 999;
-  }
+}
 
 app-home {
     display: flex; 
@@ -12,14 +12,38 @@ app-home {
     align-items: center; 
     height: 100vh;
 }
-app-about-me, app-skills, app-projects, app-contact {
+
+app-contact {
+    display: block;
+    height: 80vh;
+    padding: 130px 0 0;
+}
+
+app-about-me, app-skills, app-projects {
     display: block;
     min-height: 100vh;
-    padding: 150px 0 0;
+    padding: 130px 0 0;
+}
+
+::ng-deep ::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+::ng-deep ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::ng-deep ::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+    border-radius: 5px;
 }
 
 @media screen and (max-height: 768px) {
     app-about-me, app-skills, app-projects, app-contact {
-        padding: 75px 0 0;
+        padding: 70px 0 0;
+    }
+
+    app-contact {
+        height: 90vh;
     }
 }

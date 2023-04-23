@@ -7,18 +7,24 @@ mat-toolbar {
     align-items: center;
 }
 
-.name {
-    color: #f3f3f38e;
-    text-shadow: #e45327 0px 0 10px;
-    font-size: 32px;
-    font-family: 'Chakra Petch', sans-serif;
-}
-
 .name-music-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-width: 50px;
+}
+
+.name {
+    color: #f3f3f38e;
+    text-shadow: #e45327 0px 0 10px;
+    font-size: 32px;
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0 15px 0 0;
+    user-select: none;
+}
+
+.name:hover {
+    transform: scale(1.3);
 }
 
 .music {
