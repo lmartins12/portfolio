@@ -6,6 +6,18 @@
         "link": "https://mundolm.net/"
     },
     {
+        "img": "assets/projects/PsicoERP.png",
+        "titulo": "Psico ERP",
+        "resumo": "API Java baseada em um ERP para consultórios de psicologia, os psicólogos podem se autenticar, adicionar pacientes, agendar sessões e registrar informações sobre cada sessão",
+        "link": "https://github.com/lmartins12/psicoerp"
+    },
+    {
+        "img": "assets/projects/Portfolio.png",
+        "titulo": "Portfolio",
+        "resumo": "Esse é um site criado em Angular que utilizo para apresentar meus projetos e habilidades conforme vou me desenvolvendo.",
+        "link": "https://lucasm.vercel.app/"
+    },
+    {
         "img": "assets/projects/AluraTube.png",
         "titulo": "AluraTube",
         "resumo": "Projeto realizado em React, trata-se de uma simulação de playlist de musicas do youtube, utilizando banco de dados para armazenar o link das musicas.",

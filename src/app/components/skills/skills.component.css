@@ -100,9 +100,19 @@ i {
   color: #5FB832;
 }
 
+#aws:hover {
+  transform: scale(1.1);
+  color: #F7A80D;
+}
+
 #linux:hover {
   transform: scale(1.1);
   color: white;
+}
+
+#podman:hover {
+  transform: scale(1.1);
+  color: #85319D;
 }
 
 #git:hover {
