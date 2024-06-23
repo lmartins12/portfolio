@@ -46,5 +46,10 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "prettier": "^2.8.8",
     "typescript": "~4.9.4"
+  },
+  "resolutions": {
+    "postcss": "^8.4.31",
+    "semver": "^7.5.2",
+    "webpack-dev-middleware": "^6.2.0"
   }
 }

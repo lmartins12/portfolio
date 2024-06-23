@@ -1,11 +1,5 @@
 [
     {
-        "img": "assets/projects/MundoLM.png",
-        "titulo": "Mundo <LM>",
-        "resumo": "Mundo <LM> é um blog em Wordpress com artigos dos mais variados temas do mundo virtual, criei ele com o intuito compartilhar conhecimentos que tenho e terei.",
-        "link": "https://mundolm.net/"
-    },
-    {
         "img": "assets/projects/PsicoERP.png",
         "titulo": "Psico ERP",
         "resumo": "API Java baseada em um ERP para consultórios de psicologia, os psicólogos podem se autenticar, adicionar pacientes, agendar sessões e registrar informações sobre cada sessão",
@@ -16,6 +10,12 @@
         "titulo": "Portfolio",
         "resumo": "Esse é um site criado em Angular que utilizo para apresentar meus projetos e habilidades conforme vou me desenvolvendo.",
         "link": "https://lucasm.vercel.app/"
+    },
+    {
+        "img": "assets/projects/CosturaOrganizada.png",
+        "titulo": "Costura Organizada",
+        "resumo": "Costura Organizada é um sistema ERP desenvolvido para gerenciar um ateliê de costura. É um projeto de faculdade para fornecer uma interface intuitiva para o gerenciamento de clientes, encomendas e tarefas.",
+        "link": "https://github.com/lmartins12/PEI-CosturaOrganizada"
     },
     {
         "img": "assets/projects/AluraTube.png",
